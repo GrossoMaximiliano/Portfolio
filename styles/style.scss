@@ -1,0 +1,459 @@
+$verde_claro: #64ffda;
+$verde_oscurito: #2dfaca;
+$gris_semiclaro: #8892B0;
+$gris_claro: #ccd6f6;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Calibre', sans-serif;
+}
+
+body {
+    background-color: #0A192F;
+}
+
+nav {
+    position: fixed;
+    background-color: #09182F;
+    height: 68px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1000000;
+
+    
+    .navlinks{
+        display: flex;
+        justify-content: space-around;
+        width: 50vw;
+        padding-right: 10px;
+        a {
+            padding: 10px;
+            text-decoration: none;
+            font-family: "SF Mono",  monospace;
+            font-size: 13px;
+            color: $gris_claro;
+            font-weight: 300;
+
+            &:hover{
+                transition: all 0.5s;
+                background-color: #132f5e;
+                border: 1px dotted $verde_claro;
+                border-radius: 0.2rem;
+            }
+
+            &:last-child{
+                color: $verde_claro;
+                border: 1px solid $verde_claro;
+                text-decoration: none;
+                border-radius: 0.2rem;
+                transition: all 0.3s;
+
+                &:hover{
+                    transition: all 0.3s;
+                    background-color: #132f5e;
+                }
+                
+            }
+        }
+    }
+
+   
+}
+
+.homePage{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: left;
+    height: 100vh;
+
+    .WelcomeSection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        height: 100%;
+        
+
+    
+        h1, span{ 
+            font-family: "SF Mono",  monospace;
+            font-size: 15px;
+            letter-spacing: 1.1px;
+            color: $verde_claro;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: $gris_claro;
+        }
+        
+        h3 {
+            color: $gris_semiclaro;
+        }
+    
+        p {
+            color: $gris_semiclaro;
+            letter-spacing: 1.2px;
+            font-family: "SF Mono",  monospace;
+            font-size: 15px;
+            width: 55vw;
+        }
+    
+        a {
+            margin-top: 30px;
+        }
+        
+    }
+
+    .redes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80px;
+        img {
+            transition: 0.5s all;
+            margin: 5px;
+            width: 70px;
+            border: 2px solid $verde_claro;
+            border-style: dashed solid;
+            border-radius: 0.2rem;
+        }
+
+        a:hover{
+            img {
+                transition: 0.5s all;
+                width: 75px;
+            }
+        }
+    }
+}
+
+
+
+.showMyProjectsButton{
+    color: $verde_claro;
+    border: 1px solid $verde_claro;
+    transition: all 0.5s;
+    font-family: "SF Mono",  monospace;
+    text-decoration: none;
+    border-radius: 0.2rem;
+    padding: 17px 0px;
+    max-width: 270px;
+    text-align: center;
+
+    &:hover{
+        transition: all 0.3s;
+        background-color: #132f5e;
+    }
+}
+
+.greenText{
+    color: $verde_claro;
+}
+
+.greenOutlined{
+    color: rgba(255, 0, 0, 0);
+    -webkit-text-stroke: 2px $verde_claro;
+}
+
+
+.WhereIWorked{
+    height: 100vh;
+}
+
+.titleHeader {
+    font-size: calc( 4vw + 20px);
+    letter-spacing: 1.1px;
+    font-weight: 600;
+}
+
+.aboutMe{
+    margin: 40px;
+    display: flex;
+    justify-content: space-around;
+
+    .aboutMe__Content{
+        .titleHeader{
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .parrafs{
+            p{
+                color: $gris_semiclaro;
+                font-size: 1.4em;
+                font-weight: 300;
+                letter-spacing: 1.3px;
+                font-family: "SF Mono",  monospace;
+            }
+            padding: 15px 13px;
+            padding-bottom: 30px;
+            
+        }
+
+        .aboutMe__Content__Technologies{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .technology_card{
+                margin: 10px 0;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 150px;
+                
+                .technology_card_image{
+                    img{
+                        height: 54px;
+                        fill: $verde_oscurito;
+                    }
+
+                    #expressIcon{
+                        filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+                    }
+                }
+
+                .technology_card_content{
+                    h3{
+                        color: $verde_claro;
+                        font-weight: 400;
+                        letter-spacing: 1.3px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    h1 {
+        color: $gris_claro;
+    }
+}
+
+
+
+.myExperience{
+    .myExperience__Content{
+        margin-top: 100px;
+
+        .titleHeader{
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .myTimeline{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            margin-top: 20px;
+            .myTimeline__item{
+                position: relative;
+                width: 600px;
+                height: 200px;
+                padding: 0 25px;
+
+                .rigth{
+                    right: -10px;
+                    .myTimeline__item__title{margin-left: 20px;}
+                    .myTimeline__item__content{
+                        margin-left: 20px;
+                        border-radius: 20px;
+                        border-top-left-radius: 0;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: -22px;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            z-index: 2;
+                            background-color: #259b7f;
+                        }     
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: -10px;
+                        transform: translateX(-50%);
+                        width: 2px;
+                        height: 100%;
+                        background-color: gray;
+                    }
+                }
+
+                .left{
+                    left: 0;
+                    .myTimeline__item__title{margin-right: 20px;}
+                    .myTimeline__item__content
+                    {
+                        margin-right: 20px; float: left;
+                        border-radius: 20px;
+                        border-top-right-radius: 0;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: -22.5px;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            z-index: 2;
+                            background-color: #259b7f;
+                        }                    
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        margin-left: 10px;
+                        transform: translateX(-50%);
+                        width: 2px;
+                        height: 95%;
+                        background-color: gray;
+                    }
+                }
+
+                .container{
+                    position: absolute;
+                    width: 320px;
+
+
+                    .myTimeline__item__title{
+                        p{
+                            
+                            font-weight: 450;
+                            font-size: 18px;
+                            font-family: "SF Mono";
+                            color: $gris_semiclaro;
+                            padding-bottom: 10px;
+                        }
+                    }
+    
+                    .myTimeline__item__content{
+                        width: 300px;
+                        height: 200px;
+                        
+                        background-color: #1d365c;
+                        h1{
+                            color: $gris_claro;
+                            padding: 10px;
+                            font-weight: 500;
+                            font-size: 22px;
+                        }
+                        p{
+                            padding-left: 10px;
+                            padding-top: 5px;
+                            font-weight: 400;
+                            color: $gris_semiclaro;
+                        }
+                        
+                    }
+
+
+                }
+
+
+            }
+        }
+    }
+}
+
+.myProjects{
+    .myProyects__content{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2{
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            font-size: 20px;
+            text-align: center;
+            padding: 20px 30px;
+        }
+
+        .myProjects__Cards{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            justify-items: center;
+            flex-wrap: wrap;
+
+            .myProjects__Cards_Item{
+                width: 270px;
+                height: 200px;
+                padding: 22px 22px;
+                margin: 10px;
+                background-color: #112240;
+                .myProjects__Cards_Item__header{
+                    display: flex;
+                    align-items: center;
+                    justify-items: center;
+                    justify-content: space-between;
+                    i{
+                       
+                            font-size: 36px;
+                            font-weight: 320;
+                            color: $verde_oscurito;
+                    }
+
+                    a i {
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: $gris_semiclaro;
+                    }
+                }
+
+                .myProjects__Cards_Item__Content{
+                    height: calc(100% - 20px);
+                    width: 100%;
+                    position: relative;
+                    margin-top: 20px;
+                    a{
+                        
+                        font-size: 22px;
+                        font-weight: 600;
+                    }
+
+                    p{
+                        margin: 20px 0;
+                        font-size: 17px;
+                        font-weight: 400;
+                        color: $gris_semiclaro;
+                    }
+
+                    ul {
+                        position: absolute;
+                        bottom: 30px;
+                        list-style: none;
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        li {
+                            font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+                            font-size: 12px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
