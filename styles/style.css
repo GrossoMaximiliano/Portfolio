@@ -3,6 +3,7 @@
   padding: 0;
   color: white;
   font-family: 'Calibre', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,6 +25,8 @@ nav {
       -ms-flex-pack: end;
           justify-content: flex-end;
   z-index: 1000000;
+  -webkit-transition: height 1s;
+  transition: height 1s;
 }
 
 nav .navlinks {
@@ -160,7 +163,7 @@ nav .navlinks a:last-child:hover {
   width: 75px;
 }
 
-.showMyProjectsButton {
+.RectangularButton {
   color: #64ffda;
   border: 1px solid #64ffda;
   -webkit-transition: all 0.5s;
@@ -173,7 +176,7 @@ nav .navlinks a:last-child:hover {
   text-align: center;
 }
 
-.showMyProjectsButton:hover {
+.RectangularButton:hover {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   background-color: #132f5e;
@@ -186,6 +189,7 @@ nav .navlinks a:last-child:hover {
 .greenOutlined {
   color: rgba(255, 0, 0, 0);
   -webkit-text-stroke: 2px #64ffda;
+  text-shadow: none;
 }
 
 .WhereIWorked {
@@ -196,6 +200,29 @@ nav .navlinks a:last-child:hover {
   font-size: calc( 4vw + 20px);
   letter-spacing: 1.1px;
   font-weight: 600;
+  text-shadow: 1.5px 1.5px 2px #015f49;
+}
+
+.subTitle {
+  margin-top: 10px;
+  text-align: center;
+  color: #8892B0;
+  letter-spacing: 1.1px;
+  font-family: "SF Mono",  monospace;
+  font-size: 15px;
+  font-weight: 400;
+  width: 80%;
+}
+
+.subTitle span {
+  letter-spacing: 1.1px;
+  font-family: "SF Mono",  monospace;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.noshadow {
+  text-shadow: none;
 }
 
 .aboutMe {
@@ -219,7 +246,7 @@ nav .navlinks a:last-child:hover {
 
 .aboutMe .aboutMe__Content .parrafs p {
   color: #8892B0;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 300;
   letter-spacing: 1.3px;
   font-family: "SF Mono",  monospace;
@@ -435,16 +462,8 @@ nav .navlinks a:last-child:hover {
           flex-direction: column;
 }
 
-.myProjects .myProyects__content h2 {
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  font-size: 20px;
-  text-align: center;
-  padding: 20px 30px;
-}
-
 .myProjects .myProyects__content .myProjects__Cards {
-  margin-top: 20px;
+  margin: 20px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,10 +478,11 @@ nav .navlinks a:last-child:hover {
 }
 
 .myProjects .myProyects__content .myProjects__Cards .myProjects__Cards_Item {
-  width: 270px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   padding: 22px 22px;
-  margin: 10px;
+  margin: 5px;
+  margin-top: 10px;
   background-color: #112240;
 }
 
@@ -527,5 +547,179 @@ nav .navlinks a:last-child:hover {
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-size: 12px;
   font-weight: 400;
+}
+
+.contactMe .contactMe_Content {
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactMe .contactMe_Content .RectangularButton {
+  margin: 50px 30px;
+  padding: 17px 27px;
+}
+
+.onlyphone {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .onlyphone {
+    display: inherit;
+  }
+  .hide_on_phone {
+    display: none !important;
+  }
+  .parrafs {
+    font-size: 12px;
+  }
+  .technology_card {
+    width: 120px !important;
+  }
+  nav {
+    height: 60px;
+  }
+  nav .navlinks {
+    position: absolute;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 17px;
+    margin: auto;
+    right: 0;
+    left: 0;
+  }
+  nav .navlinks a:last-of-type {
+    margin-top: 10px;
+  }
+  .WelcomeSection {
+    margin: 10px;
+  }
+  .myTimeline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 20px;
+  }
+  .myTimeline .myTimeline__item {
+    position: relative;
+    width: 300px !important;
+    margin: 20px auto;
+    height: 200px;
+    padding: 0 25px;
+  }
+  .myTimeline .myTimeline__item .rigth, .myTimeline .myTimeline__item .left {
+    right: auto !important;
+    left: auto !important;
+  }
+  .myTimeline .myTimeline__item .rigth .myTimeline__item__title, .myTimeline .myTimeline__item .left .myTimeline__item__title {
+    margin: 0 !important;
+    text-align: center;
+  }
+  .myTimeline .myTimeline__item .rigth .myTimeline__item__content, .myTimeline .myTimeline__item .left .myTimeline__item__content {
+    margin: 0 !important;
+    border-radius: 20px !important;
+  }
+  .myTimeline .myTimeline__item .rigth .myTimeline__item__content::before, .myTimeline .myTimeline__item .rigth .myTimeline__item__content:after, .myTimeline .myTimeline__item .left .myTimeline__item__content::before, .myTimeline .myTimeline__item .left .myTimeline__item__content:after {
+    content: "";
+    position: inherit;
+    display: none;
+  }
+  .myTimeline .myTimeline__item .rigth:before, .myTimeline .myTimeline__item .rigth:after, .myTimeline .myTimeline__item .left:before, .myTimeline .myTimeline__item .left:after {
+    content: "";
+    position: inherit;
+    display: none;
+  }
+  .myTimeline .myTimeline__item .container {
+    position: relative;
+    width: 320px;
+  }
+  .myTimeline .myTimeline__item .container .myTimeline__item__title p {
+    font-weight: 450;
+    font-size: 18px;
+    font-family: "SF Mono";
+    color: #8892B0;
+    padding-bottom: 10px;
+  }
+  .myTimeline .myTimeline__item .container .myTimeline__item__content {
+    width: 300px;
+    height: 200px;
+    background-color: #1d365c;
+  }
+  .myTimeline .myTimeline__item .container .myTimeline__item__content h1 {
+    color: #ccd6f6;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .myTimeline .myTimeline__item .container .myTimeline__item__content p {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-weight: 400;
+    color: #8892B0;
+  }
+}
+
+.btnExpandNav {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .homePage .redes img {
+    width: 55px;
+  }
+  .homePage .redes:hover img {
+    width: 45px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .homePage .redes img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 310px) {
+  .myTimeline__item {
+    width: 250px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

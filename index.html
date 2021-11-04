@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-      <meta charset="utf-8">
-      <title>Portafolio</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="author" content="Grosso Maximiliano https://github.com/GrossoMaximiliano">
+      <meta name="copyright" content="https://github.com/GrossoMaximiliano" />
+      <meta name="description"content="Portafolio de desarrollador Stack MERN y otras tecnologias. ReactJS, NodeJS, MongoDB, Mongoose">
+      <meta name="keywords"content="jr, junior, web developer, fullstack, software engineer, scss, reactjs, nodejs, node, mongodb, mongoose, CSS-flexbox, flexbox, css, html, html5, scss, sql, mysql, nosql">
+      <meta name="robots" content="index" />
+      <meta name="robots" content="follow" />
+      <meta http-equiv="cache-control" content="no-cache" />
+
+      <title>Grosso Maximiliano</title>
       <link rel="stylesheet" href="./styles/style.css">
       <link href="http://fonts.cdnfonts.com/css/sf-mono" rel="stylesheet">
       <link href="http://fonts.cdnfonts.com/css/calibre" rel="stylesheet">
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
-    <nav>
+    <nav id="navbar">
+        <div class="navlinks hide_on_phone" id="navlinks">
+          <a href="#WelcomeSection" onclick="resetToggle()">Inicio</a>
+          <a href="#aboutMe" onclick="resetToggle()">Sobre mi</a>
+          <a href="#myExperience" onclick="resetToggle()">Experiencia</a>
+          <a href="#myProjects" onclick="resetToggle()">Proyectos</a>
+          <a href="#contactMe" onclick="resetToggle()">Contacto</a>
+        </div>  
 
-        <div class="navlinks">
-          <a href="">Inicio</a>
-          <a href="">Sobre mi</a>
-          <a href="">Experiencia</a>
-          <a href="">Proyectos</a>
-          <a href="">Contacto</a>
-        </div>
+        <div class="onlyphone">
+          <span id="menuBtn" class="btnExpandNav material-icons" onclick="toggleMenu()">menu</span>
+      </div>
+
     </nav>
 
     <article class="homePage" >
 
-      <section class="WelcomeSection">
+      <section class="WelcomeSection" id="WelcomeSection">
         <h1>Hola, mi nombre es</h1>
-        <h2 class="titleHeader">Grosso Maximiliano</h2>
-        <h3 class="titleHeader">Full-Stack Developer</h3>
+        <h2 class="titleHeader noshadow">Grosso Maximiliano</h2>
+        <h3 class="titleHeader noshadow">Full-Stack Developer</h3>
         <p>Soy un <span class="greenText">Desarrollador Web</span> apasionado por la programación y el aprendizaje de las nuevas <span>tecnologías web</span>.</p>
-        <a href="#projects" class="showMyProjectsButton">¡Mira mis proyectos!</a>
+        <a href="#myProjects"class="RectangularButton">¡Mira mis proyectos!</a>
       </section>
 
       <section class="redes">
@@ -41,7 +54,7 @@
 
     </article>
 
-    <article class="aboutMe">
+    <article class="aboutMe" id="aboutMe">
       <section class="aboutMe__Content">
         <h1 class="titleHeader"> <span class="greenOutlined"><</span> Sobre mi <span class="greenOutlined">/></span></h1>
 
@@ -159,7 +172,7 @@
     </article>
 
 
-    <article class="myExperience">
+    <article class="myExperience" id="myExperience">
       <section class="myExperience__Content">
         <h1 class="titleHeader">Experiencia</h1>
         <div class="myTimeline"> 
@@ -197,11 +210,11 @@
       </section>
     </article>
     <br/><br/><br/>
-
-    <article class="myProjects">
+   
+    <article class="myProjects" id="myProjects">
       <section class="myProyects__content">
         <h1 class="titleHeader">Mis proyectos</h1>
-        <h2>Todos los proyectos que aparecen aqui son creados desde 0 (incluido los estilos, no se utilizó ningun framework css), no se utilizó ningun codigo perteneciente a otra persona.</h2>
+        <h2 class="subTitle">Todos los proyectos que aparecen aqui son creados desde <span class="greenText">0 (cero)</span> y no se utilizó ningun codigo/frameworks/librerias de otra persona (excluyendo iconos y fuentes).</h2>
 
         <div class="myProjects__Cards">
 
@@ -213,7 +226,7 @@
 
             <div class="myProjects__Cards_Item__Content">
               <a>Portfolio </a>
-              <p>Pagina web responsiva desarrollada desde 0. (Usted se encuentra aqui)</p>
+              <p>Presente pagina web</p>
               <ul class="myProjects__Cards_Item__Content__Technologies"> 
                 <li>HTML</li>
                 <li>SCSS</li>
@@ -243,7 +256,7 @@
           <div class="myProjects__Cards_Item">
             <div class="myProjects__Cards_Item__header">
               <i class="far fa-folder"></i>
-              <a href="https://github.com/GrossoMaximiliano/URLShorter"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/GrossoMaximiliano/URLShorter" target="_blank"><i class="fas fa-external-link-alt"></i></a>
             </div>
 
             <div class="myProjects__Cards_Item__Content">
@@ -261,7 +274,7 @@
           <div class="myProjects__Cards_Item">
             <div class="myProjects__Cards_Item__header">
               <i class="far fa-folder"></i>
-              <a href="https://github.com/GrossoMaximiliano/SimpleNotes---ReactJS"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/GrossoMaximiliano/SimpleNotes---ReactJS" target="_blank"><i class="fas fa-external-link-alt"></i></a>
             </div>
 
             <div class="myProjects__Cards_Item__Content">
@@ -278,7 +291,7 @@
           <div class="myProjects__Cards_Item">
             <div class="myProjects__Cards_Item__header">
               <i class="far fa-folder"></i>
-              <a href="https://github.com/GrossoMaximiliano/CoronavirusStats"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/GrossoMaximiliano/CoronavirusStats" target="_blank"><i class="fas fa-external-link-alt"></i></a>
             </div>
 
             <div class="myProjects__Cards_Item__Content">
@@ -297,8 +310,37 @@
     </article>
     <br>
     <br>
-    <br>
-    <br>
 
+    <article class="contactMe" id="contactMe">
+      <section class="contactMe_Content">
+        
+        <h1 class="titleHeader">¡Contactame!</h1>
+        <h3 class="subTitle">Estoy dispuesto a escuchar nuevas <span class="greenText">oportunidades</span> y/o <span class="greenText">propuestas</span>, contactame e intentaré responderte a la brevedad.</h3>
+        <a href="https://www.linkedin.com/in/maximiliano-grosso/" target="=_blank" class="RectangularButton">¡Hablemos en Linkedin!</a>
+      </section>
+    </article> 
+
+    <script>
+      function toggleMenu(){
+          if ( document.getElementById("navlinks").classList.contains("hide_on_phone") ) {
+              document.getElementById("navbar").style.height="100%";
+              document.getElementById("navlinks").classList.remove("hide_on_phone");
+              document.getElementById("menuBtn").innerHTML="close";
+            } else {
+              document.getElementById("navbar").style.height="60px";
+              document.getElementById("navlinks").classList.add("hide_on_phone");
+              document.getElementById("menuBtn").innerHTML="menu";
+          }
+      };
+
+      function resetToggle(){
+        if ( document.getElementById("navbar").style.height == "100%"){
+            document.getElementById("navbar").style.height="60px";
+            document.getElementById("navlinks").classList.add("hide_on_phone");
+            document.getElementById("menuBtn").innerHTML="menu";
+        }
+
+      };
+  </script> 
   </body>
 </html>
