@@ -544,7 +544,7 @@ nav .navlinks a:last-child:hover {
 }
 
 .myProjects .myProyects__content .myProjects__Cards .myProjects__Cards_Item .myProjects__Cards_Item__Content ul li {
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-family: "SF Mono", monospace;
   font-size: 12px;
   font-weight: 400;
 }
@@ -691,6 +691,8 @@ nav .navlinks a:last-child:hover {
     padding-left: 10px;
     padding-top: 5px;
     font-weight: 400;
+	font-family: "SF Mono",monospace;
+	font-size: 14px;
     color: #8892B0;
   }
 }
